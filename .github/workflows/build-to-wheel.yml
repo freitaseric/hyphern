@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetching version from pyproject.toml
-        run: echo "VERSION=$(shell python -c 'import tomli; print(tomli.load(open("pyproject.toml", "rb"))["project"]["version"])')" >> $GITHUB_ENV
+        run: echo "VERSION=$(python3 -c 'import tomli; print(tomli.load(open("pyproject.toml", "rb"))["project"]["version"])')" >> $GITHUB_ENV
 
   upload:
     runs-on: ubuntu-latest
