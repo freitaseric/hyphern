@@ -12,7 +12,9 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Guides',
-					autogenerate: { directory: 'guides' },
+					items: [
+						{ label: 'Example Guide', slug: 'guides/example' },
+					],
 				},
 				{
 					label: 'Reference',
