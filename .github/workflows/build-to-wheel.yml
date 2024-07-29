@@ -25,8 +25,11 @@ jobs:
       - name: Build wheel
         run: make build
 
+      - name: Fetch version
+        run: echo "VERSION=$(grep -oP '(?<=^version = ")[^"]*' pyproject.toml)" >> $GITHUB_ENV
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: hyphern-$(grep -oP '(?<=^version = ")[^"]*' pyproject.toml)
+          name: hyphern-$VERSION
           path: dist/*.whl
