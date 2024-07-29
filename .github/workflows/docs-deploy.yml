@@ -19,8 +19,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
-          path: docs/
-          package-manager: yarn@latest
+          path: docs
 
   deploy:
     needs: build
