@@ -20,6 +20,8 @@ jobs:
         uses: withastro/action@v2
         with:
           path: docs
+      - name: Build artifacts
+        uses: actions/upload-pages-artifact
 
   deploy:
     needs: build
