@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hyphern"
+version = "0.0.1a1"
+requires-python = ">=3.12"
+authors = [
+    { name = "Eric Freitas", email = "freitaseric@proton.me" }
+]
+maintainers = []
+description = "A simple and lightweight ORM for small python projects."
+readme = "README.md"
+license = "LICENSE"
+keywords = ["sqlite", "orm"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python 3.12"
+]
+
+[project.urls]
+Homepage = "https://freitaseric.github.io/simple-orm"
+Documentation = "https://freitaseric.github.io/simple-orm/docs"
+Repository = "https://github.com/freitaseric/simple-orm"
+"Bug Tracker" = "https://github.com/freitaseric/simple-orm/issues"
+Changelog = "https://github.com/freitaseric/simple-orm/releases"
