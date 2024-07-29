@@ -24,6 +24,6 @@ export default defineConfig({
 			],
 		}),
 	],
-	site: 'https://freitaseric.github.io',
-	base: '/hyphern',
+	site: 'https://freitaseric.github.io/hyphern',
+	base: '/docs',
 });
