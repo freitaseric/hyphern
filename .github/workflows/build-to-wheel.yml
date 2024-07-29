@@ -1,0 +1,30 @@
+name: Build to wheel
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Building
+        run: make build
+
+  fetch-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetching version from pyproject.toml
+        run: echo "VERSION=$(shell python -c 'import tomli; print(tomli.load(open("pyproject.toml", "rb"))["project"]["version"])')" >> $GITHUB_ENV
+
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hyphern-$VERSION
+          path: dist/hyphern-$VERSION*.whl

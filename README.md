@@ -35,8 +35,8 @@ $ python3 -m pip install hyphern
 Install from source:
 
 ```shell
-    $ git clone https://github.com/freitaseric/hyphern.git --depth=1
-    $ pip install ./hyphern/
+$ git clone https://github.com/freitaseric/hyphern.git --depth=1
+$ pip install ./hyphern/
 ```
 
 ## Minimal Usage
