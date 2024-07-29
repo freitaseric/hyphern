@@ -21,7 +21,7 @@ jobs:
         with:
           path: docs
       - name: Build artifacts
-        uses: actions/upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3
 
   deploy:
     needs: build
