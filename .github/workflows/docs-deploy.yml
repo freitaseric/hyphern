@@ -19,9 +19,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         with:
-          path: docs
-      - name: Build artifacts
-        uses: actions/upload-pages-artifact@v3
+          path: ./docs/
 
   deploy:
     needs: build
