@@ -12,10 +12,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'hyphern/guides/example' },
-					],
+					autogenerate: { directory: 'reference' },
 				},
 				{
 					label: 'Reference',
